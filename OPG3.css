@@ -1,0 +1,141 @@
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    html {
+      font-size: 18px;
+    }
+  }
+  
+  body {
+    height: 100%;
+    margin-bottom: 60px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+/*---: ZIG-ZAG CSS SETUP :---*/
+* {
+  box-sizing: border-box;
+}
+
+/*"body > .container" dvs reglen KUN gælder for `childs` af <body>
+    <body>
+      <header>
+        <!-- Indhold af header -->
+      </header>
+      <!-- Yderligere indhold af body -->
+    </body>*/    
+body > .container {
+  padding: 64px;  
+}
+
+.footer {
+  height: 300px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.large-font {
+  font-size: 38px;
+}
+
+.xlarge-font {
+  font-size: 54px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #04AA6D;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}
+
+/*---: PARRALLAX BG SETUP :---*/
+
+#spring2019 {   /*Simpel styling for `Spring2019 sektionen + parrallax`*/
+  background-image: url('Images/codeFlatBG01.jpg');
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 75%; /*Cover eller %, måske*/
+  /*color: #fff;  Juster tekstfarven baseret på baggrundens farver */
+  padding: 100px 0; /* Juster padding efter behov */
+  filter: contrast(1) saturate(0.7);
+}
+
+#spring2019 .column-66 {  /*Gennemsigtigheds attributer for bedre at kunne læse tekst*/
+  background: rgba(255, 255, 255, 0.0);  /*Juster farven og gennemsigtigheden efter behov */
+  padding: 80px; /* Juster padding efter behov */
+}
+
+#spring2019::before { /*Agere som et vidt lag over ovenstående billede..*/
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.92); /* Juster farven og gennemsigtigheden efter behov */
+  z-index: -1; /* Sørger for, at det overlejrede element er bagest */
+}
+
+#anbo {   /*Simpel styling for `Spring2019 sektionen + parrallax`*/
+  background-image: url('Images/codeFlatBG02.jpg');
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 58%; /*Cover eller %, måske*/
+  /*color: #fff;  Juster tekstfarven baseret på baggrundens farver */
+  padding: 100px 0; /* Juster padding efter behov */
+  filter: contrast(1) saturate(0.7);
+}
+
+#anbo::before { /*Agere som et vidt lag over ovenstående billede..*/
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.92); /* Juster farven og gennemsigtigheden efter behov */
+  z-index: -1; /* Sørger for, at det overlejrede element er bagest */
+}
