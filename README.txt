@@ -3,4 +3,4 @@ This site is also available at Azure.net
 
 https://OPG3AnboForside.azurewebsites.net/
 
-By - MNF 2023
+By - MNF 2023 AKA BobSponge
